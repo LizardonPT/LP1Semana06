@@ -11,7 +11,7 @@ namespace MyGame
         //Constructor
         public Enemy(string name)
         {
-            this.name = name;
+            SetName(name);
             health = 100;
             shield = 0;
         }
@@ -31,6 +31,21 @@ namespace MyGame
                 health -= damageStillToInflict;
                 if (health <= 0) health = 0;
             }
+        }
+
+        public float GetHealth()
+        {
+            return health;
+        }
+
+        public float GetShield()
+        {
+            return shield;
+        } 
+
+        public void SetName(string name)
+        {
+            this.name = name.Trim();
         }
     }
 }
