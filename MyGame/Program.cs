@@ -32,6 +32,19 @@ namespace MyGame
                 Console.WriteLine(enemy_list[i].GetName());
             }
 
+            enemy_list[3].TakeDamage(33);
+            enemy_list[3].PickupPowerUp(PowerUp.Shield, 25);
+            enemy_list[2].TakeDamage(62);
+            enemy_list[2].PickupPowerUp(PowerUp.Health, 50);
+
+            Console.WriteLine($"{enemy_list[3].GetName()}. "
+            + $"Shield: {enemy_list[3].GetShield()}; "
+            + $"Health: {enemy_list[3].GetHealth()};");
+
+            Console.WriteLine($"{enemy_list[2].GetName()}. "
+            + $"Shield: {enemy_list[2].GetShield()}; "
+            + $"Health: {enemy_list[2].GetHealth()};");
+
         }
     }
 }

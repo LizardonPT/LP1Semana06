@@ -47,5 +47,26 @@ namespace MyGame
         {
             this.name = name.Trim();
         }
+
+        public void PickupPowerUp(PowerUp type, float value)
+        {
+            if (type == PowerUp.Health)
+            {
+                health += value;
+                if (health > 100)
+                {
+                    health = 100;
+                }
+            }
+
+            if (type == PowerUp.Shield)
+            {
+                shield += value;
+                if (shield > 100)
+                {
+                    shield = 100;
+                }
+            }
+        }
     }
 }
